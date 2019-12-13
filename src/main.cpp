@@ -24,7 +24,7 @@ int main(int argc, char** argv)
 
     start_time = clock();
     cv::Mat Ying_dst;
-    Ying_2017_ICCV(src, Ying_dst);
+    Ying_2017_CAIP(src, Ying_dst);
     end_time = clock();
     MyTimeOutput("Ying处理时间: ", start_time, end_time);
 

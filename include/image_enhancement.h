@@ -12,7 +12,7 @@
 
 #include "util.h"
 
-void Ying_2017_ICCV(const cv::Mat& src, cv::Mat& dst, double mu = 0.5, double a = -0.3293, double b = 1.1258, double lambda = 0.5, double sigma = 5)
+void Ying_2017_CAIP(const cv::Mat& src, cv::Mat& dst, double mu = 0.5, double a = -0.3293, double b = 1.1258, double lambda = 0.5, double sigma = 5)
 {
     clock_t start_time, end_time;
 
