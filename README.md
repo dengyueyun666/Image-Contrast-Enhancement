@@ -12,6 +12,7 @@ C++ implementation of "[A New Image Contrast Enhancement Algorithm Using Exposur
   
 ## Usage
 ```
+cd Image-Contrast-Enhancement
 cmake .
 make
 ./main <input_image>
