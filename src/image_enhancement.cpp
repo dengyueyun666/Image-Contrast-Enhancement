@@ -95,7 +95,7 @@ void LDR(const cv::Mat& src, cv::Mat & dst, double alpha)
 	cv::pow(s / max_s, alpha, W); // Equation (23)
 	cv::Mat d = D * W; // Equation (24)
 
-					   // reconstruct transformation function
+	// reconstruct transformation function
 	d /= cv::sum(d)[0];
 	cv::Mat tmp = cv::Mat::zeros(256, 1, CV_64F);
 	for (int k = 1; k <= 255; k++) {
