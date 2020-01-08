@@ -3,16 +3,16 @@ C++ implementation of several image contrast enhancement techniques.
 
 ## Techniques
 * LDR
-  * An implementation of "[Contrast Enhancement based on Layered Difference Representation of 2D Histograms](http://mcl.korea.ac.kr/cwlee_tip2013/)".
+  * [Contrast Enhancement based on Layered Difference Representation of 2D Histograms](http://mcl.korea.ac.kr/cwlee_tip2013/) (TIP 2013), Lee et al.
   * Only OpenCV3 is needed.
 * Ying_2017_CAIP
-  * An implementation of "[A New Image Contrast Enhancement Algorithm Using Exposure Fusion Framework](https://baidut.github.io/OpenCE/caip2017.html)".
+  * [A New Image Contrast Enhancement Algorithm Using Exposure Fusion Framework](https://baidut.github.io/OpenCE/caip2017.html) (CAIP 2017), Ying et al.
   * All requirements are needed.
 * CEusingLuminanceAdaptation
-  * An implementation of "[Retinex-based perceptual contrast enhancement in images using luminance adaptation](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8500743)".
+  * [Retinex-based perceptual contrast enhancement in images using luminance adaptation](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8500743) (2018), Fu et al.
   * Only OpenCV3 is needed.
 * adaptiveImageEnhancement
-  * An implementation of "[Adaptive image enhancement method for correcting low-illumination images](https://www.sciencedirect.com/science/article/pii/S0020025519304104)".
+  * [Adaptive image enhancement method for correcting low-illumination images](https://www.sciencedirect.com/science/article/pii/S0020025519304104) (2019), Wang et al.
   * Only OpenCV3 is needed.
 
 ## Requirements
