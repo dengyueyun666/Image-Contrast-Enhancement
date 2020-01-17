@@ -28,6 +28,13 @@ int main(int argc, char** argv)
     clock_t start_time, end_time;
 
     start_time = clock();
+
+    cv::Mat AINDANE_dst;
+    AINDANE(src, AINDANE_dst);
+    end_time = clock();
+    MyTimeOutput("AINDANE处理时间: ", start_time, end_time);
+
+    start_time = clock();
     cv::Mat LDR_dst;
     LDR(src, LDR_dst);
     end_time = clock();
@@ -52,6 +59,7 @@ int main(int argc, char** argv)
     MyTimeOutput("adaptiveImageEnhancement处理时间: ", start_time, end_time);   
 
     cv::imshow("src", src);
+    cv::imshow("AINDANE_dst", AINDANE_dst);
     cv::imshow("LDR_dst", LDR_dst);
     cv::imshow("Ying_dst", Ying_dst);
     cv::imshow("CEusingLuminanceAdaptation_dst", CEusingLuminanceAdaptation_dst);

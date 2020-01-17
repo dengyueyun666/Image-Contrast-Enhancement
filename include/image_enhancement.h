@@ -5,6 +5,23 @@
 #include <opencv2/opencv.hpp>
 
 /***
+@article{tao2005adaptive,
+  title={Adaptive and integrated neighborhood-dependent approach for nonlinear enhancement of color images},
+  author={Tao, Li and Asari, Vijayan K},
+  journal={Journal of Electronic Imaging},
+  volume={14},
+  number={4},
+  pages={043006},
+  year={2005},
+  publisher={International Society for Optics and Photonics}
+}
+
+The code refers to this blog(https://www.cnblogs.com/Imageshop/p/11665100.html).
+***/
+void AINDANE(const cv::Mat & src, cv::Mat & dst, int sigma1 = 5, int sigma2 = 20, int sigma3 = 120);
+
+
+/***
 @article{lee2013contrast,
   title={Contrast enhancement based on layered difference representation of 2D histograms},
   author={Lee, Chulwoo and Lee, Chul and Kim, Chang-Su},
