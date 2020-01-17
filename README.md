@@ -2,17 +2,25 @@
 C++ implementation of several image contrast enhancement techniques.
 
 ## Techniques
+* AINDANE
+  * [Adaptive and integrated neighborhood-dependent approach for nonlinear enhancement of color images](https://www.spiedigitallibrary.org/journals/Journal-of-Electronic-Imaging/volume-14/issue-4/043006/Adaptive-and-integrated-neighborhood-dependent-approach-for-nonlinear-enhancement-of/10.1117/1.2136903.short?SSO=1) (2005), Tao et al.
+  * Accepted input image : Color(√) Grayscale(×)
+  * Only OpenCV3 is needed.
 * LDR
   * [Contrast Enhancement based on Layered Difference Representation of 2D Histograms](http://mcl.korea.ac.kr/cwlee_tip2013/) (TIP 2013), Lee et al.
+  * Accepted input image : Color(√)  Grayscale(√)
   * Only OpenCV3 is needed.
 * Ying_2017_CAIP
   * [A New Image Contrast Enhancement Algorithm Using Exposure Fusion Framework](https://baidut.github.io/OpenCE/caip2017.html) (CAIP 2017), Ying et al.
+  * Accepted input image : Color(√) Grayscale(√)
   * All requirements are needed.
 * CEusingLuminanceAdaptation
   * [Retinex-based perceptual contrast enhancement in images using luminance adaptation](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8500743) (2018), Fu et al.
+  * Accepted input image : Color(√) Grayscale(×)
   * Only OpenCV3 is needed.
 * adaptiveImageEnhancement
   * [Adaptive image enhancement method for correcting low-illumination images](https://www.sciencedirect.com/science/article/pii/S0020025519304104) (2019), Wang et al.
+  * Accepted input image : Color(√) Grayscale(×)
   * Only OpenCV3 is needed.
 
 ## Requirements
@@ -34,6 +42,17 @@ make
 
 ## Citations
 ```
+@article{tao2005adaptive,
+  title={Adaptive and integrated neighborhood-dependent approach for nonlinear enhancement of color images},
+  author={Tao, Li and Asari, Vijayan K},
+  journal={Journal of Electronic Imaging},
+  volume={14},
+  number={4},
+  pages={043006},
+  year={2005},
+  publisher={International Society for Optics and Photonics}
+}
+
 @article{lee2013contrast,
   title={Contrast enhancement based on layered difference representation of 2D histograms},
   author={Lee, Chulwoo and Lee, Chul and Kim, Chang-Su},
