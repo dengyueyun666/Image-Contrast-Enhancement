@@ -81,4 +81,16 @@ void CEusingLuminanceAdaptation(const cv::Mat& src, cv::Mat& dst);
 ***/
 void adaptiveImageEnhancement(const cv::Mat& src, cv::Mat& dst);
 
+
+/***
+@article{agrawal2019novel,
+  title={A novel joint histogram equalization based image contrast enhancement},
+  author={Agrawal, Sanjay and Panda, Rutuparna and Mishro, PK and Abraham, Ajith},
+  journal={Journal of King Saud University-Computer and Information Sciences},
+  year={2019},
+  publisher={Elsevier}
+}
+***/
+void JHE(const cv::Mat & src, cv::Mat & dst);
+
 #endif

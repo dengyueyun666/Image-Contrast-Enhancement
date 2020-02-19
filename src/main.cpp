@@ -56,7 +56,13 @@ int main(int argc, char** argv)
     cv::Mat adaptiveImageEnhancement_dst;
     adaptiveImageEnhancement(src, adaptiveImageEnhancement_dst);
     end_time = clock();
-    MyTimeOutput("adaptiveImageEnhancement处理时间: ", start_time, end_time);   
+    MyTimeOutput("adaptiveImageEnhancement处理时间: ", start_time, end_time);
+    
+    start_time = clock();
+    cv::Mat JHE_dst;
+    LDR(src, JHE_dst);
+    end_time = clock();
+    MyTimeOutput("JHE处理时间: ", start_time, end_time);
 
     cv::imshow("src", src);
     cv::imshow("AINDANE_dst", AINDANE_dst);
@@ -64,6 +70,7 @@ int main(int argc, char** argv)
     cv::imshow("Ying_dst", Ying_dst);
     cv::imshow("CEusingLuminanceAdaptation_dst", CEusingLuminanceAdaptation_dst);
     cv::imshow("adaptiveImageEnhancement_dst", adaptiveImageEnhancement_dst);
+    cv::imshow("JHE_dst", JHE_dst);
 	
     cv::waitKey();
     return 0;

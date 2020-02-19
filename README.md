@@ -22,6 +22,10 @@ C++ implementation of several image contrast enhancement techniques.
   * [Adaptive image enhancement method for correcting low-illumination images](https://www.sciencedirect.com/science/article/pii/S0020025519304104) (2019), Wang et al.
   * Accepted input image : Color(√) Grayscale(×)
   * Only OpenCV3 is needed.
+* JHE
+  * [A novel joint histogram equalization based image contrast enhancement](https://www.sciencedirect.com/science/article/pii/S1319157819303635) (2019), Agrawal et al.
+  * Accepted input image : Color(√) Grayscale(√)
+  * Only OpenCV3 is needed.
 
 ## Requirements
 * Ubuntu-16.04
@@ -89,6 +93,14 @@ make
   journal={Information Sciences},
   volume={496},
   pages={25--41},
+  year={2019},
+  publisher={Elsevier}
+}
+
+@article{agrawal2019novel,
+  title={A novel joint histogram equalization based image contrast enhancement},
+  author={Agrawal, Sanjay and Panda, Rutuparna and Mishro, PK and Abraham, Ajith},
+  journal={Journal of King Saud University-Computer and Information Sciences},
   year={2019},
   publisher={Elsevier}
 }
