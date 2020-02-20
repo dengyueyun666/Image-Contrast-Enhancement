@@ -6,6 +6,10 @@ C++ implementation of several image contrast enhancement techniques.
   * [Adaptive and integrated neighborhood-dependent approach for nonlinear enhancement of color images](https://www.spiedigitallibrary.org/journals/Journal-of-Electronic-Imaging/volume-14/issue-4/043006/Adaptive-and-integrated-neighborhood-dependent-approach-for-nonlinear-enhancement-of/10.1117/1.2136903.short?SSO=1) (2005), Tao et al.
   * Accepted input image : Color(√) Grayscale(×)
   * Only OpenCV3 is needed.
+* WTHE
+  * [Fast image/video contrast enhancement based on weighted thresholded histogram equalization](https://ieeexplore.ieee.org/abstract/document/4266969/) (2007), Wang et al.
+  * Accepted input image : Color(√) Grayscale(√)
+  * Only OpenCV3 is needed.
 * LDR
   * [Contrast Enhancement based on Layered Difference Representation of 2D Histograms](http://mcl.korea.ac.kr/cwlee_tip2013/) (TIP 2013), Lee et al.
   * Accepted input image : Color(√)  Grayscale(√)
@@ -55,6 +59,17 @@ make
   pages={043006},
   year={2005},
   publisher={International Society for Optics and Photonics}
+}
+
+@article{wang2007fast,
+  title={Fast image/video contrast enhancement based on weighted thresholded histogram equalization},
+  author={Wang, Qing and Ward, Rabab K},
+  journal={IEEE transactions on Consumer Electronics},
+  volume={53},
+  number={2},
+  pages={757--764},
+  year={2007},
+  publisher={IEEE}
 }
 
 @article{lee2013contrast,

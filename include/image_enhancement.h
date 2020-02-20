@@ -22,6 +22,22 @@ void AINDANE(const cv::Mat & src, cv::Mat & dst, int sigma1 = 5, int sigma2 = 20
 
 
 /***
+@article{wang2007fast,
+  title={Fast image/video contrast enhancement based on weighted thresholded histogram equalization},
+  author={Wang, Qing and Ward, Rabab K},
+  journal={IEEE transactions on Consumer Electronics},
+  volume={53},
+  number={2},
+  pages={757--764},
+  year={2007},
+  publisher={IEEE}
+}
+***/
+void WTHE(const cv::Mat & src, cv::Mat & dst, float r = 0.5, float v = 0.5);
+
+
+
+/***
 @article{lee2013contrast,
   title={Contrast enhancement based on layered difference representation of 2D histograms},
   author={Lee, Chulwoo and Lee, Chul and Kim, Chang-Su},
