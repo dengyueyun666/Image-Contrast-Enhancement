@@ -14,6 +14,10 @@ C++ implementation of several image contrast enhancement techniques.
   * [Contrast Enhancement based on Layered Difference Representation of 2D Histograms](http://mcl.korea.ac.kr/cwlee_tip2013/) (TIP 2013), Lee et al.
   * Accepted input image : Color(√)  Grayscale(√)
   * Only OpenCV3 is needed.
+* AGCWD
+  * [Efficient Contrast Enhancement Using Adaptive Gamma Correction With Weighting Distribution](https://ieeexplore.ieee.org/abstract/document/6336819) (TIP 2013), Huang et al.
+  * Accepted input image : Color(√)  Grayscale(√)
+  * Only OpenCV3 is needed.
 * Ying_2017_CAIP
   * [A New Image Contrast Enhancement Algorithm Using Exposure Fusion Framework](https://baidut.github.io/OpenCE/caip2017.html) (CAIP 2017), Ying et al.
   * Accepted input image : Color(√) Grayscale(√)
@@ -81,6 +85,16 @@ make
   pages={5372--5384},
   year={2013},
   publisher={IEEE}
+}
+
+@article{huang2013efficient,
+  title={Efficient Contrast Enhancement Using Adaptive Gamma Correction With Weighting Distribution},
+  author={Huang, Shihchia and Cheng, Fanchieh and Chiu, Yisheng},
+  journal={IEEE Transactions on Image Processing},
+  volume={22},
+  number={3},
+  pages={1032--1041},
+  year={2013}
 }
 
 @inproceedings{ying2017new,

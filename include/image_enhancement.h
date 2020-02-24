@@ -55,6 +55,20 @@ void LDR(const cv::Mat& src, cv::Mat & dst, double alpha = 2.5);
 
 
 /***
+@article{huang2013efficient,
+  title={Efficient Contrast Enhancement Using Adaptive Gamma Correction With Weighting Distribution},
+  author={Huang, Shihchia and Cheng, Fanchieh and Chiu, Yisheng},
+  journal={IEEE Transactions on Image Processing},
+  volume={22},
+  number={3},
+  pages={1032--1041},
+  year={2013}
+}
+***/
+void AGCWD(const cv::Mat & src, cv::Mat & dst, double alpha = 0.5);
+
+
+/***
 @inproceedings{ying2017new,
   title={A New Image Contrast Enhancement Algorithm Using Exposure Fusion Framework},
   author={Ying, Zhenqiang and Li, Ge and Ren, Yurui and Wang, Ronggang and Wang, Wenmin},
