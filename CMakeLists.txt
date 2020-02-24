@@ -12,7 +12,14 @@ include_directories(
 )
 
 add_executable(main 
-    src/image_enhancement.cpp
+    src/util.cpp
+    src/AINDANE.cpp
+    src/WTHE.cpp
+    src/LDR.cpp
+    src/Ying_2017_CAIP.cpp
+    src/CEusingLuminanceAdaptation.cpp
+    src/adaptiveImageEnhancement.cpp
+    src/JHE.cpp
     src/main.cpp
 )
 target_link_libraries(main  
