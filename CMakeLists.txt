@@ -17,6 +17,7 @@ add_executable(main
     src/WTHE.cpp
     src/LDR.cpp
     src/AGCWD.cpp
+    src/IAGCWD.cpp
     src/Ying_2017_CAIP.cpp
     src/CEusingLuminanceAdaptation.cpp
     src/adaptiveImageEnhancement.cpp

@@ -52,6 +52,12 @@ int main(int argc, char** argv)
     MyTimeOutput("AGCWD处理时间: ", start_time, end_time);
 
     start_time = clock();
+    cv::Mat IAGCWD_dst;
+    IAGCWD(src, IAGCWD_dst);
+    end_time = clock();
+    MyTimeOutput("IAGCWD处理时间: ", start_time, end_time);
+
+    start_time = clock();
     cv::Mat Ying_dst;
     Ying_2017_CAIP(src, Ying_dst);
     end_time = clock();
@@ -80,6 +86,7 @@ int main(int argc, char** argv)
     cv::imshow("WTHE_dst", WTHE_dst);
     cv::imshow("LDR_dst", LDR_dst);
     cv::imshow("AGCWD_dst", AGCWD_dst);
+    cv::imshow("IAGCWD_dst", IAGCWD_dst);
     cv::imshow("Ying_dst", Ying_dst);
     cv::imshow("CEusingLuminanceAdaptation_dst", CEusingLuminanceAdaptation_dst);
     cv::imshow("adaptiveImageEnhancement_dst", adaptiveImageEnhancement_dst);
