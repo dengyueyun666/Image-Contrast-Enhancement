@@ -18,6 +18,10 @@ C++ implementation of several image contrast enhancement techniques.
   * [Efficient Contrast Enhancement Using Adaptive Gamma Correction With Weighting Distribution](https://ieeexplore.ieee.org/abstract/document/6336819) (TIP 2013), Huang et al.
   * Accepted input image : Color(√)  Grayscale(√)
   * Only OpenCV3 is needed.
+* AGCIE
+  * [An adaptive gamma correction for image enhancement](https://link.springer.com/article/10.1186%2Fs13640-016-0138-1) (2016), Rahman et al.
+  * Accepted input image : Color(√)  Grayscale(√)
+  * Only OpenCV3 is needed.
 * IAGCWD
   * [Contrast enhancement of brightness-distorted images by improved adaptive gamma correction](https://arxiv.org/abs/1709.04427) (2017), Cao et al.
   * Accepted input image : Color(√)  Grayscale(√)
@@ -99,6 +103,16 @@ make
   number={3},
   pages={1032--1041},
   year={2013}
+}
+
+@article{rahman2016an,
+  title={An adaptive gamma correction for image enhancement},
+  author={Rahman, Shanto and Rahman, Mostafijur and Abdullahalwadud, M and Alquaderi, Golam Dastegir and Shoyaib, Mohammad},
+  journal={Eurasip Journal on Image and Video Processing},
+  volume={2016},
+  number={1},
+  pages={35},
+  year={2016}
 }
 
 @article{cao2017contrast,

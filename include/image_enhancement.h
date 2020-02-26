@@ -69,6 +69,20 @@ void AGCWD(const cv::Mat & src, cv::Mat & dst, double alpha = 0.5);
 
 
 /***
+@article{rahman2016an,
+  title={An adaptive gamma correction for image enhancement},
+  author={Rahman, Shanto and Rahman, Mostafijur and Abdullahalwadud, M and Alquaderi, Golam Dastegir and Shoyaib, Mohammad},
+  journal={Eurasip Journal on Image and Video Processing},
+  volume={2016},
+  number={1},
+  pages={35},
+  year={2016}
+}
+***/
+void AGCIE(const cv::Mat & src, cv::Mat & dst);
+
+
+/***
 @article{cao2017contrast,
   title={Contrast enhancement of brightness-distorted images by improved adaptive gamma correction},
   author={Cao, Gang and Huang, Lihui and Tian, Huawei and Huang, Xianglin and Wang, Yongbin and Zhi, Ruicong},
