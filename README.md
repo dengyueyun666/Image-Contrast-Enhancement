@@ -42,11 +42,15 @@ C++ implementation of several image contrast enhancement techniques.
   * [A novel joint histogram equalization based image contrast enhancement](https://www.sciencedirect.com/science/article/pii/S1319157819303635) (2019), Agrawal et al.
   * Accepted input image : Color(√) Grayscale(√)
   * Only OpenCV3 is needed.
+* SEF
+  * [An Extended Exposure Fusion and its Application to Single Image Contrast Enhancement](http://openaccess.thecvf.com/content_WACV_2020/papers/Hessel_An_Extended_Exposure_Fusion_and_its_Application_to_Single_Image_WACV_2020_paper.pdf) (WACV 2020), Hessel et al.
+  * Accepted input image : Color(√) Grayscale(√)
+  * Only OpenCV3 is needed.
 
 ## Requirements
 * Ubuntu-16.04
 * Cmake
-* OpenCV3
+* OpenCV-3.4.6+
 * Dlib-19.18+
 * SuperLU-5.2.1+
 * Armadillo-9.800.3+
@@ -159,5 +163,13 @@ make
   journal={Journal of King Saud University-Computer and Information Sciences},
   year={2019},
   publisher={Elsevier}
+}
+
+@inproceedings{hessel2020extended,
+  title={An extended exposure fusion and its application to single image contrast enhancement},
+  author={Hessel, Charles and Morel, Jean-Michel},
+  booktitle={The IEEE Winter Conference on Applications of Computer Vision},
+  pages={137--146},
+  year={2020}
 }
 ```

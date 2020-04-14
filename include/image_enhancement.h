@@ -150,4 +150,18 @@ void adaptiveImageEnhancement(const cv::Mat& src, cv::Mat& dst);
 ***/
 void JHE(const cv::Mat & src, cv::Mat & dst);
 
+
+/***
+@inproceedings{hessel2020extended,
+  title={An extended exposure fusion and its application to single image contrast enhancement},
+  author={Hessel, Charles and Morel, Jean-Michel},
+  booktitle={The IEEE Winter Conference on Applications of Computer Vision},
+  pages={137--146},
+  year={2020}
+}
+
+This is a reimplementation from https://github.com/chlsl/simulated-exposure-fusion-ipol/
+***/
+void SEF(const cv::Mat & src, cv::Mat & dst, double alpha = 6.0, double beta = 0.5, double lambda = 0.125);
+
 #endif

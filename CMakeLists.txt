@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 2.8)
 
 project(image_contrast_enhancement)
 
-find_package(OpenCV REQUIRED)
+set(CMAKE_CXX_STANDARD 11)
+
+find_package(OpenCV 3 REQUIRED)
 find_package(dlib REQUIRED)
 find_package(Armadillo REQUIRED)
 include_directories(
@@ -23,6 +25,7 @@ add_executable(main
     src/CEusingLuminanceAdaptation.cpp
     src/adaptiveImageEnhancement.cpp
     src/JHE.cpp
+    src/SEF.cpp
     src/main.cpp
 )
 target_link_libraries(main  
