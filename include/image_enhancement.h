@@ -36,6 +36,20 @@ void AINDANE(const cv::Mat & src, cv::Mat & dst, int sigma1 = 5, int sigma2 = 20
 void WTHE(const cv::Mat & src, cv::Mat & dst, float r = 0.5, float v = 0.5);
 
 
+/***
+@article{arici2009histogram,
+  title={A histogram modification framework and its application for image contrast enhancement},
+  author={Arici, Tarik and Dikbas, Salih and Altunbasak, Yucel},
+  journal={IEEE Transactions on image processing},
+  volume={18},
+  number={9},
+  pages={1921--1935},
+  year={2009},
+  publisher={IEEE}
+}
+***/
+void GCEHistMod(const cv::Mat& src, cv::Mat& dst, int threshold = 5, int b = 23, int w = 230, double alpha = 2, int g = 10);
+
 
 /***
 @article{lee2013contrast,

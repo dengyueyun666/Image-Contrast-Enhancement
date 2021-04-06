@@ -10,6 +10,10 @@ C++ implementation of several image contrast enhancement techniques.
   * [Fast image/video contrast enhancement based on weighted thresholded histogram equalization](https://ieeexplore.ieee.org/abstract/document/4266969/) (2007), Wang et al.
   * Accepted input image : Color(√) Grayscale(√)
   * Only OpenCV3 is needed.
+* GCEHistMod
+  * [A histogram modification framework and its application for image contrast enhancement](https://ieeexplore.ieee.org/abstract/document/4895264) (TIP 2009), Arici et al.
+  * Accepted input image : Color(√)  Grayscale(√)
+  * Only OpenCV3 is needed.
 * LDR
   * [Contrast Enhancement based on Layered Difference Representation of 2D Histograms](http://mcl.korea.ac.kr/cwlee_tip2013/) (TIP 2013), Lee et al.
   * Accepted input image : Color(√)  Grayscale(√)
@@ -85,6 +89,17 @@ make
   number={2},
   pages={757--764},
   year={2007},
+  publisher={IEEE}
+}
+
+@article{arici2009histogram,
+  title={A histogram modification framework and its application for image contrast enhancement},
+  author={Arici, Tarik and Dikbas, Salih and Altunbasak, Yucel},
+  journal={IEEE Transactions on image processing},
+  volume={18},
+  number={9},
+  pages={1921--1935},
+  year={2009},
   publisher={IEEE}
 }
 

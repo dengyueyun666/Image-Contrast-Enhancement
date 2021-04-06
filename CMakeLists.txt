@@ -17,6 +17,7 @@ add_executable(main
     src/util.cpp
     src/AINDANE.cpp
     src/WTHE.cpp
+    src/GCEHistMod.cpp
     src/LDR.cpp
     src/AGCWD.cpp
     src/AGCIE.cpp
