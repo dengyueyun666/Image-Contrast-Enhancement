@@ -47,6 +47,22 @@ int main(int argc, char** argv)
     end_time = high_resolution_clock::now();
     MyTimeOutput("LDR处理时间: ", start_time, end_time);
 
+	start_time = high_resolution_clock::now();
+	cv::Mat CLAHE_dst;
+	cv::Mat labImage;
+	cv::cvtColor(src, labImage, cv::COLOR_BGR2Lab);
+	std::vector<cv::Mat> labPlanes(3);
+	cv::split(labImage, labPlanes);
+	cv::Ptr<cv::CLAHE> clahe = cv::createCLAHE();
+	clahe->setClipLimit(4);
+	cv::Mat dst;
+	clahe->apply(labPlanes[0], dst);
+	dst.copyTo(labPlanes[0]);
+	cv::merge(labPlanes, labImage);
+	cv::cvtColor(labImage, CLAHE_dst, cv::COLOR_Lab2BGR);
+	end_time = high_resolution_clock::now();
+	MyTimeOutput("CLAHE处理时间: ", start_time, end_time);
+
     start_time = high_resolution_clock::now();
     cv::Mat AGCWD_dst;
     AGCWD(src, AGCWD_dst);
@@ -96,20 +112,35 @@ int main(int argc, char** argv)
     end_time = high_resolution_clock::now();
     MyTimeOutput("SEF处理时间: ", start_time, end_time);
 
+	cv::namedWindow("src", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("src", src);
+	cv::namedWindow("AINDANE_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("AINDANE_dst", AINDANE_dst);
+	cv::namedWindow("WTHE_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("WTHE_dst", WTHE_dst);
+	cv::namedWindow("GCEHistMod_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("GCEHistMod_dst", GCEHistMod_dst);
+	cv::namedWindow("LDR_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("LDR_dst", LDR_dst);
+	cv::namedWindow("CLAHE_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
+    cv::imshow("CLAHE_dst", CLAHE_dst);
+	cv::namedWindow("AGCWD_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("AGCWD_dst", AGCWD_dst);
+	cv::namedWindow("AGCIE_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("AGCIE_dst", AGCIE_dst);
+	cv::namedWindow("IAGCWD_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("IAGCWD_dst", IAGCWD_dst);
 #ifdef USE_ARMA
+	cv::namedWindow("Ying_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("Ying_dst", Ying_dst);
 #endif
+	cv::namedWindow("CEusingLuminanceAdaptation_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("CEusingLuminanceAdaptation_dst", CEusingLuminanceAdaptation_dst);
+	cv::namedWindow("adaptiveImageEnhancement_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("adaptiveImageEnhancement_dst", adaptiveImageEnhancement_dst);
+	cv::namedWindow("JHE_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("JHE_dst", JHE_dst);
+	cv::namedWindow("SEF_dst", cv::WINDOW_NORMAL | cv::WINDOW_KEEPRATIO);
     cv::imshow("SEF_dst", SEF_dst);
 	
     cv::waitKey();
