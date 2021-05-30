@@ -91,7 +91,7 @@ void CEusingLuminanceAdaptation(const cv::Mat& src, cv::Mat& dst)
 
     HSV_channels[2] = V_out;
     cv::merge(HSV_channels, HSV);
-    cv::cvtColor(HSV, dst, CV_HSV2BGR_FULL);
+    cv::cvtColor(HSV, dst, cv::COLOR_HSV2BGR_FULL);
 
     return;
 }

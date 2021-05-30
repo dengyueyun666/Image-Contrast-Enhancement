@@ -64,13 +64,14 @@ int main(int argc, char** argv)
     IAGCWD(src, IAGCWD_dst);
     end_time = high_resolution_clock::now();
     MyTimeOutput("IAGCWD处理时间: ", start_time, end_time);
-
+	
+#ifdef USE_ARMA
     start_time = high_resolution_clock::now();
     cv::Mat Ying_dst;
     Ying_2017_CAIP(src, Ying_dst);
     end_time = high_resolution_clock::now();
     MyTimeOutput("Ying处理时间: ", start_time, end_time);
-
+#endif
     start_time = high_resolution_clock::now();
     cv::Mat CEusingLuminanceAdaptation_dst;
     CEusingLuminanceAdaptation(src, CEusingLuminanceAdaptation_dst);
@@ -103,7 +104,9 @@ int main(int argc, char** argv)
     cv::imshow("AGCWD_dst", AGCWD_dst);
     cv::imshow("AGCIE_dst", AGCIE_dst);
     cv::imshow("IAGCWD_dst", IAGCWD_dst);
+#ifdef USE_ARMA
     cv::imshow("Ying_dst", Ying_dst);
+#endif
     cv::imshow("CEusingLuminanceAdaptation_dst", CEusingLuminanceAdaptation_dst);
     cv::imshow("adaptiveImageEnhancement_dst", adaptiveImageEnhancement_dst);
     cv::imshow("JHE_dst", JHE_dst);

@@ -98,19 +98,19 @@ void robust_normalization(const cv::Mat& src, cv::Mat& dst, double wSat = 1.0, d
 		cv::max(src_channels[0], src_channels[1], max_channel);
 		cv::max(max_channel, src_channels[2], max_channel);
 		cv::Mat max_channel_sort;
-		cv::sort(max_channel.reshape(1,1), max_channel_sort, CV_SORT_ASCENDING);
+		cv::sort(max_channel.reshape(1,1), max_channel_sort, cv::SORT_ASCENDING);
 		vmax = max_channel_sort.at<double>(int(N - wSat*N / 100 + 1));
 
 		cv::Mat min_channel;
 		cv::min(src_channels[0], src_channels[1], min_channel);
 		cv::min(min_channel, src_channels[2], min_channel);
 		cv::Mat min_channel_sort;
-		cv::sort(min_channel.reshape(1, 1), min_channel_sort, CV_SORT_ASCENDING);
+		cv::sort(min_channel.reshape(1, 1), min_channel_sort, cv::SORT_ASCENDING);
 		vmin = min_channel_sort.at<double>(int(bSat*N / 100));
 	}
 	else {
 		cv::Mat src_sort;
-		cv::sort(src.reshape(1, 1), src_sort, CV_SORT_ASCENDING);
+		cv::sort(src.reshape(1, 1), src_sort, cv::SORT_ASCENDING);
 		vmax = src_sort.at<double>(int(N - wSat*N / 100 + 1));
 		vmin = src_sort.at<double>(int(bSat*N / 100));
 	}
@@ -171,7 +171,7 @@ void SEF(const cv::Mat & src, cv::Mat & dst, double alpha, double beta, double l
 		L = src.clone();
 	}
 	else {
-		cv::cvtColor(src, HSV, CV_BGR2HSV_FULL);
+		cv::cvtColor(src, HSV, cv::COLOR_BGR2HSV_FULL);
 		cv::split(HSV, HSV_channels);
 		L = HSV_channels[2];
 	}
@@ -197,7 +197,7 @@ void SEF(const cv::Mat & src, cv::Mat & dst, double alpha, double beta, double l
 	// Compute median
 	cv::Mat tmp = src.reshape(1, 1);
 	cv::Mat sorted;
-	cv::sort(tmp, sorted, CV_SORT_ASCENDING);
+	cv::sort(tmp, sorted, cv::SORT_ASCENDING);
 	double med = double(sorted.at<uchar>(rows * cols * channels / 2)) / 255.0;
 	//std::cout << "med = " << med << std::endl;
 

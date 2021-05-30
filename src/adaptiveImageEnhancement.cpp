@@ -46,7 +46,7 @@ void adaptiveImageEnhancement(const cv::Mat& src, cv::Mat& dst)
     X2.copyTo(X(cv::Range(0, n), cv::Range(1, 2)));
 
     cv::Mat covar, mean;
-    cv::calcCovarMatrix(X, covar, mean, CV_COVAR_NORMAL | CV_COVAR_ROWS, CV_64F);
+    cv::calcCovarMatrix(X, covar, mean, cv::COVAR_NORMAL | cv::COVAR_ROWS, CV_64F);
 
     cv::Mat eigenValues; //The eigenvalues are stored in the descending order.
     cv::Mat eigenVectors; //The eigenvectors are stored as subsequent matrix rows.
@@ -61,7 +61,7 @@ void adaptiveImageEnhancement(const cv::Mat& src, cv::Mat& dst)
 
     HSV_channels[2] = F;
     cv::merge(HSV_channels, HSV);
-    cv::cvtColor(HSV, dst, CV_HSV2BGR_FULL);
+    cv::cvtColor(HSV, dst, cv::COLOR_HSV2BGR_FULL);
 
     return;
 }
