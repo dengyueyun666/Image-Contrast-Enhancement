@@ -4,13 +4,16 @@
 // This must be defnined, in order to use arma::spsolve in the code with SuperLU
 #define ARMA_USE_SUPERLU
 
+#ifdef USE_ARMA
 #include <armadillo>
+#endif
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
+#ifdef USE_ARMA
 // This is a Armadillo-based implementation of spdiags in Matlab.
 arma::sp_mat spdiags(const arma::mat& B, const std::vector<int>& d, int m, int n);
-
+#endif
 
 enum ConvolutionType {
 	/* Return the full convolution, including border */

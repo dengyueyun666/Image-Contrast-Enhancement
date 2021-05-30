@@ -6,7 +6,7 @@
 void AINDANE(const cv::Mat& src, cv::Mat& dst, int sigma1, int sigma2, int sigma3)
 {
     cv::Mat I;
-    cv::cvtColor(src, I, CV_BGR2GRAY);
+    cv::cvtColor(src, I, cv::COLOR_BGR2GRAY);
 
     int histsize = 256;
     float range[] = { 0, 256 };

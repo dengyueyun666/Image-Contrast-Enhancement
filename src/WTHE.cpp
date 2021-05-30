@@ -17,7 +17,7 @@ void WTHE(const cv::Mat & src, cv::Mat & dst, float r, float v)
 		L = src.clone();
 	}
 	else {
-		cv::cvtColor(src, YUV, CV_BGR2YUV);
+		cv::cvtColor(src, YUV, cv::COLOR_BGR2YUV);
 		cv::split(YUV, YUV_channels);
 		L = YUV_channels[0];
 	}
@@ -71,7 +71,7 @@ void WTHE(const cv::Mat & src, cv::Mat & dst, float r, float v)
 	}
 	else {
 		cv::merge(YUV_channels, dst);
-		cv::cvtColor(dst, dst, CV_YUV2BGR);
+		cv::cvtColor(dst, dst, cv::COLOR_YUV2BGR);
 	}
 
 	return;

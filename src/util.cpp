@@ -1,12 +1,12 @@
 // This must be defnined, in order to use arma::spsolve in the code with SuperLU
 #define ARMA_USE_SUPERLU
 
-#include <armadillo>
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
 #include "util.h"
 
+#ifdef USE_ARMA
 arma::sp_mat spdiags(const arma::mat& B, const std::vector<int>& d, int m, int n)
 {
     arma::sp_mat A(m, n);
@@ -18,7 +18,7 @@ arma::sp_mat spdiags(const arma::mat& B, const std::vector<int>& d, int m, int n
 
     return A;
 }
-
+#endif
 
 // This is a OpenCV-based implementation of conv2 in Matlab.
 cv::Mat conv2(const cv::Mat &img, const cv::Mat& ikernel, ConvolutionType type)

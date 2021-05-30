@@ -17,7 +17,7 @@ void IAGCWD(const cv::Mat & src, cv::Mat & dst, double alpha_dimmed, double alph
 		L = src.clone();
 	}
 	else {
-		cv::cvtColor(src, HSV, CV_BGR2HSV_FULL);
+		cv::cvtColor(src, HSV, cv::COLOR_BGR2HSV_FULL);
 		cv::split(HSV, HSV_channels);
 		L = HSV_channels[2];
 	}
@@ -93,7 +93,7 @@ void IAGCWD(const cv::Mat & src, cv::Mat & dst, double alpha_dimmed, double alph
 	}
 	else {
 		cv::merge(HSV_channels, dst);
-		cv::cvtColor(dst, dst, CV_HSV2BGR_FULL);
+		cv::cvtColor(dst, dst, cv::COLOR_HSV2BGR_FULL);
 	}
 
 	return;

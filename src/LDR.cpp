@@ -15,7 +15,7 @@ void LDR(const cv::Mat& src, cv::Mat& dst, double alpha)
         Y = src.clone();
     } else {
         cv::Mat YUV;
-        cv::cvtColor(src, YUV, CV_BGR2YUV);
+        cv::cvtColor(src, YUV, cv::COLOR_BGR2YUV);
         cv::split(YUV, YUV_channels);
         Y = YUV_channels[0];
     }
@@ -106,7 +106,7 @@ void LDR(const cv::Mat& src, cv::Mat& dst, double alpha)
         dst = Y.clone();
     } else {
         cv::merge(YUV_channels, dst);
-        cv::cvtColor(dst, dst, CV_YUV2BGR);
+        cv::cvtColor(dst, dst, cv::COLOR_YUV2BGR);
     }
 
     return;

@@ -108,7 +108,7 @@ void AGCIE(const cv::Mat & src, cv::Mat & dst);
 ***/
 void IAGCWD(const cv::Mat & src, cv::Mat & dst, double alpha_dimmed = 0.75, double alpha_bright = 0.25, int T_t = 112, double tau_t = 0.3, double tau = 0.5);
 
-
+#ifdef USE_ARMA
 /***
 @inproceedings{ying2017new,
   title={A New Image Contrast Enhancement Algorithm Using Exposure Fusion Framework},
@@ -122,7 +122,7 @@ void IAGCWD(const cv::Mat & src, cv::Mat & dst, double alpha_dimmed = 0.75, doub
 This is a reimplementation from https://baidut.github.io/OpenCE/caip2017.html
 ***/
 void Ying_2017_CAIP(const cv::Mat& src, cv::Mat& dst, double mu = 0.5, double a = -0.3293, double b = 1.1258, double lambda = 0.5, double sigma = 5);
-
+#endif
 
 /***
 @article{fu2018retinex,
